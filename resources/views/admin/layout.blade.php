@@ -7,7 +7,19 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <style>
+        table.table form {
+            display: inline-block;
+        }
+
+        button.delete {
+            background: transparent;
+            border: none;
+            color: #337ab7;
+            padding: 0px;
+        }
+    </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -431,7 +443,7 @@
     <div class="control-sidebar-bg"></div>
 </div>
 
-<script src="js/admin.js"></script>
+<script src="/js/admin.js"></script>
 </body>
 
 </html>
