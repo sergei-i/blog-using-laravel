@@ -49,3 +49,4 @@ mix.scripts([
 mix.copy('resources/admin/bootstrap/fonts', 'public/fonts');
 mix.copy('resources/admin/dist/fonts', 'public/fonts');
 mix.copy('resources/admin/dist/img', 'public/img');
+mix.copy('resources/admin/plugins/iCheck/minimal/blue.png', 'public/css');
