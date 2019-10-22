@@ -18,6 +18,21 @@ class Post extends Model
 
     protected $fillable = ['title', 'content', 'date', 'description'];
 
+    public static function getPopularPosts()
+    {
+        return self::orderBy('views', 'desc')->take(3)->get();
+    }
+
+    public static function getFeaturedPosts()
+    {
+        return self::where('is_featured', 1)->take(3)->get();
+    }
+
+    public static function orderByDate()
+    {
+        return self::orderBy('date', 'desc')->take(4)->get();
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -168,8 +183,7 @@ class Post extends Model
 
     public function getDateAttribute($value)
     {
-        $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
-        return $date;
+        return Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
     }
 
     public function getCategoryTitle()
@@ -225,6 +239,6 @@ class Post extends Model
 
     public function hasCategory()
     {
-        return $this->category != null ? true : false;
+        return $this->category != null;
     }
 }
