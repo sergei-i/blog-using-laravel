@@ -7,9 +7,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    @if(session('status'))
+                    {{--@if(session('status'))
                         <div class="alert alert-success">{{ session('status') }}</div>
-                    @endif
+                    @endif--}}
                     <article class="post">
                         <div class="post-thumb">
                             <a href="{{ route('post.show', $post->slug) }}">

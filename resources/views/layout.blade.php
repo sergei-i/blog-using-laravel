@@ -74,7 +74,13 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-
+<div class="container">
+    @if(session('status'))
+        <div class="alert alert-info">
+            {{ session('status') }}
+        </div>
+    @endif
+</div>
 @yield('content')
 
 <footer class="footer-widget-section">
